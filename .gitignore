@@ -1,0 +1,5 @@
+*.pdb
+/Source/HUI_FastColInfo/bin/*
+/Source/HUI_FastColInfo/obj/*
+/Source/HUI_FastColInfo/.vs/*
+

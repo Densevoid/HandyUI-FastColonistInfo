@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest>
+    <identifier>HUIFastColonistInfo</identifier>
+    <version>1.0.0.0</version>
+    <showCrossPromotions>true</showCrossPromotions>
+    <manifestUri>https://raw.githubusercontent.com/Densevoid/HandyUI-FastColonistInfo/master/About/Manifest.xml</manifestUri>
+    <downloadUri>https://raw.githubusercontent.com/Densevoid/HandyUI-FastColonistInfo/releases/latest</downloadUri>
+</Manifest>
