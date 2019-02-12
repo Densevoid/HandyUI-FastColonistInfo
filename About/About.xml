@@ -3,7 +3,5 @@
     <name>HandyUI - Fast Colonist Info</name>
     <author>Densevoid</author>    
     <supportedVersions><li>1.0</li></supportedVersions>
-    <description>Version: 1.0.0
-A simple mod that allows you to open a menu with categories of information about a colonist by right-clicking on his portrait at the top of the screen.
-    </description>
+    <description>A simple mod that allows you to open a menu with categories of information about a colonist by right-clicking on his portrait at the top of the screen.</description>
 </ModMetaData>

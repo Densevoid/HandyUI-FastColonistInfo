@@ -33,18 +33,17 @@ namespace HUI_FastColInfo
                 Find.WorldSelector.Select((WorldObject)selObj, false);
             }
 
-            Log.Message(selObj.GetType().ToString());
             IEnumerable<InspectTabBase> tabsList = selObj.GetInspectTabs();
-            List<FloatMenuOption> list = new List<FloatMenuOption>();
+            List<FloatMenuOption> floatMenuOptions = new List<FloatMenuOption>();
             foreach (InspectTabBase tab in tabsList)
             {
                 if (tab.IsVisible)
                 {
-                    list.Add(new FloatMenuOption(tab.labelKey.Translate(), () => itemAction(tab)));
+                    floatMenuOptions.Add(new FloatMenuOption(tab.labelKey.Translate(), () => itemAction(tab)));
                 }
             }
-            list.Reverse();
-            Find.WindowStack.Add(new FloatMenu(list));
+            floatMenuOptions.Reverse();
+            Find.WindowStack.Add(new FloatMenu(floatMenuOptions));
         }
 
         public static void ChooseMenuAction(InspectTabBase tab)
@@ -55,7 +54,7 @@ namespace HUI_FastColInfo
                 MainTabWindow_Inspect pane = (MainTabWindow_Inspect)Find.MainTabsRoot.OpenTab.TabWindow;
                 pane.OpenTabType = tab.GetType();
             }
-            if (tab is WITab)
+            else if (tab is WITab)
             {
                 Find.World.UI.inspectPane.OpenTabType = tab.GetType();
             }
