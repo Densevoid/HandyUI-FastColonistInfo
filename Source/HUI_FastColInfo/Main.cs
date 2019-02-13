@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Reflection;
 using Harmony;
 using RimWorld;
 using RimWorld.Planet;
 using Verse;
-using Verse.Sound;
 
 namespace HUI_FastColInfo
 {
@@ -14,7 +14,7 @@ namespace HUI_FastColInfo
         static HarmonyPatches()
         {
             HarmonyInstance harmony = HarmonyInstance.Create("rimworld.densevoid.hui.fastcolinf");
-            harmony.PatchAll();
+            harmony.PatchAll(Assembly.GetExecutingAssembly());
         }
     }
 
