@@ -6,6 +6,7 @@ using Verse;
 
 namespace HUI_FastColInfo.Patch
 {
+
     [HarmonyPatch(typeof(ColonistBarColonistDrawer), "HandleClicks")]
     static class Patch_ColonistBarColonistDrawer_HandleClicks
     {
@@ -39,8 +40,9 @@ namespace HUI_FastColInfo.Patch
                         FCIUtility.MakeFCIFloatMenu(FCIUtility.ChooseMenuAction, caravan);
                     }
                 }
-}
+            }
             return true;
         }
     }
+
 }

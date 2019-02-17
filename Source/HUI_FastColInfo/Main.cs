@@ -48,16 +48,18 @@ namespace HUI_FastColInfo
 
         public static void ChooseMenuAction(InspectTabBase tab)
         {
-            tab.OnOpen();
+
             if (tab is ITab)
             {
-                MainTabWindow_Inspect pane = (MainTabWindow_Inspect)Find.MainTabsRoot.OpenTab.TabWindow;
-                pane.OpenTabType = tab.GetType();
+                InspectPaneUtility.OpenTab(tab.GetType());
             }
             else if (tab is WITab)
             {
+                Find.MainTabsRoot.EscapeCurrentTab(false);
+                tab.OnOpen();
                 Find.World.UI.inspectPane.OpenTabType = tab.GetType();
             }
+
         }
     }
 
